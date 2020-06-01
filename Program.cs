@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿//need namespace to not conflict with MS
 namespace Gradebook
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            List<double> grades = new List<double>() { 1.4, 2.4, 3, 4 };
-            grades.Add(5);
 
-            double average = grades.Average();
-            Console.WriteLine($"The average grade is {average:N1}");
-
-            foreach (double grade in grades)
-            {
-                Console.WriteLine(grade);
-            }
+            //used to instantiate a class, contructor method
+            var book = new Book("Gradebook");
+            book.AddGrade(90.1);
+            book.AddGrade(80.4);
+            book.ShowStatistics();
 
         }
+
     }
+
 }
