@@ -9,24 +9,22 @@ namespace Gradebook
     class Book
 
     {
+        private string _name;
 
         //contructor must have same nane as class
         //public Book is an access modifier
-        private string _name;
         public Book(string name)
         {
             _name = name;
         }
         public void AddGrade(double grade)
         {
-
+            grades.Add(grade);
         }
 
         public void ShowStatistics()
 
         {
-            List<double> grades = new List<double>() { 1.4, 2.4, 3, 4 };
-            grades.Add(5);
 
             double highGrade = double.MinValue;
             double lowGrade = double.MaxValue;
@@ -43,5 +41,8 @@ namespace Gradebook
             Console.WriteLine($"The average grade is {average:N1}");
 
         }
+
+        private List<double> grades;
+        private string name;
     }
 }
