@@ -8,9 +8,10 @@ namespace Gradebook
         {
 
             //used to instantiate a class, contructor method
-            var book = new Book("Gradebook");
+            Book book = new Book("Gradebook");
             book.AddGrade(90.1);
             book.AddGrade(80.4);
+            book.AddGrade(70.2);
             book.ShowStatistics();
 
         }

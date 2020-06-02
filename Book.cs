@@ -9,24 +9,26 @@ namespace Gradebook
     class Book
 
     {
-
-        //contructor must have same nane as class
-        //public Book is an access modifier
+        //fields are private
+        private List<double> grades;
         private string _name;
+
+        //contructor must have same name as class
+        //public Book is an access modifier
         public Book(string name)
         {
+            //should ignitate default values inside of contructors
+            grades = new List<double>();
             _name = name;
         }
         public void AddGrade(double grade)
         {
-
+            grades.Add(grade);
         }
 
         public void ShowStatistics()
 
         {
-            List<double> grades = new List<double>() { 1.4, 2.4, 3, 4 };
-            grades.Add(5);
 
             double highGrade = double.MinValue;
             double lowGrade = double.MaxValue;
